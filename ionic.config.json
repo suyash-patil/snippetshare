@@ -1,0 +1,7 @@
+{
+  "name": "snippetshare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
