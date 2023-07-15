@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { snippets } from 'src/db/snippets';
 
 @Component({
   selector: 'app-my-snippets',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MySnippetsPage implements OnInit {
 
+  snippets: any;
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.snippets = snippets;
+  }
 
 }

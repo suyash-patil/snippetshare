@@ -1,1 +1,12 @@
+<div style="justify-content: center;">
 <app-menu-header></app-menu-header>
+
+  <ion-list *ngFor="let snippet of snippets">
+    <ion-item style="padding: 20px;">
+      <ion-label>
+        <h2>{{ snippet.title }}</h2>
+        <p>{{ snippet.snippet }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>
