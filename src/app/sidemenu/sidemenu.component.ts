@@ -15,9 +15,13 @@ export class SidemenuComponent  implements OnInit {
   ngOnInit() {}
 
   onProfileClick() {
-    console.log('Profile clicked');
     this.menuController.close();
     this.router.navigate(['/', 'profile']);
+  }
+
+  onMySnippetsClick() {
+    this.menuController.close();
+    this.router.navigate(['/', 'my_snippets']);
   }
 
 }
