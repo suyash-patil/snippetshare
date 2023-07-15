@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-sidemenu',
@@ -7,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuComponent  implements OnInit {
 
-  constructor() { }
+  // Dependency Injection
+  constructor(private router: Router, private menuController: MenuController) { }
 
   ngOnInit() {}
 
   onProfileClick() {
     console.log('Profile clicked');
+    this.menuController.close();
+    this.router.navigate(['/', 'profile']);
   }
 
 }
