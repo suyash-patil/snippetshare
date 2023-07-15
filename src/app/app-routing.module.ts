@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'add_snippet',
     loadChildren: () => import('./add-snippet/add-snippet.module').then( m => m.AddSnippetPageModule)
   },
+  {
+    path: 'my_snippets',
+    loadChildren: () => import('./my-snippets/my-snippets.module').then( m => m.MySnippetsPageModule)
+  },
 ];
 
 @NgModule({
