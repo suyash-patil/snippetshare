@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-header',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuHeaderComponent  implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
+
+  onAddSnippetClick() {
+    this.router.navigate(['/','add_snippet']);
+  }
 
 }

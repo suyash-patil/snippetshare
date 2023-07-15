@@ -1,13 +1,19 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>add-snippet</ion-title>
+    <ion-title>Add Snippet</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">add-snippet</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div style="width: 90%; margin: auto; margin-top: 20px;">
+    <ion-textarea rows="15" style="border: 1px solid rgb(67, 67, 67); background-color: rgb(240, 236, 236); border-radius: 10px; padding: 5px;" [placeholder]="'Write Something'"></ion-textarea>
+  </div>
+    <ion-buttons style="display: flex;flex-direction: row; justify-content: space-evenly; margin-top: 20px;">
+      <ion-button fill="outline" (click)="onCancelClick()">
+        Cancel
+      </ion-button>
+      <ion-button fill="solid">
+        Save
+      </ion-button>
+    </ion-buttons>
 </ion-content>
