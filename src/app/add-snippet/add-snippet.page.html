@@ -6,14 +6,19 @@
 
 <ion-content>
   <div style="width: 90%; margin: auto; margin-top: 20px;">
-    <ion-textarea rows="15" style="border: 1px solid rgb(67, 67, 67); background-color: rgb(240, 236, 236); border-radius: 10px; padding: 5px;" [placeholder]="'Write Something'"></ion-textarea>
+    <form [formGroup]="fg">
+      <ion-input formControlName="title" [placeholder]="'Add Title'"></ion-input>
+      <ion-text [hidden]="fg.controls['title'].valid || (fg.controls['title'].pristine && !fg.controls['title'].touched)" color="danger">Title is required</ion-text>
+      <ion-textarea formControlName="snippet" rows="15" style="border: 1px solid rgb(67, 67, 67); background-color: rgb(240, 236, 236); border-radius: 10px; padding: 5px;" [placeholder]="'Write Something'"></ion-textarea>
+      <ion-text [hidden]="fg.controls['snippet'].valid || (fg.controls['snippet'].pristine && !fg.controls['snippet'].touched)" color="danger">Snippet can't be empty</ion-text>
+      <ion-buttons style="display: flex;flex-direction: row; justify-content: space-evenly; margin-top: 20px;">
+        <ion-button fill="outline" (click)="onCancelClick()">
+          Cancel
+        </ion-button>
+        <ion-button fill="solid" (click)="onSave()">
+          Save
+        </ion-button>
+      </ion-buttons>
+    </form>
   </div>
-    <ion-buttons style="display: flex;flex-direction: row; justify-content: space-evenly; margin-top: 20px;">
-      <ion-button fill="outline" (click)="onCancelClick()">
-        Cancel
-      </ion-button>
-      <ion-button fill="solid">
-        Save
-      </ion-button>
-    </ion-buttons>
 </ion-content>
