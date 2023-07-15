@@ -4,6 +4,8 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { ProfilePage } from './profile.page';
 import { ProfilePageRoutingModule } from './profile-routing.module';
+import { MenuHeaderModule } from '../shared/menu-header/menu-header.module';
+import { MenuHeaderComponent } from '../shared/menu-header/menu-header.component';
 
 
 
@@ -12,7 +14,8 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ProfilePageRoutingModule
+    ProfilePageRoutingModule,
+    MenuHeaderModule
   ],
   declarations: [ProfilePage]
 })

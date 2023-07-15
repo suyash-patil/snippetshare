@@ -16,6 +16,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'add_snippet',
+    loadChildren: () => import('./add-snippet/add-snippet.module').then( m => m.AddSnippetPageModule)
+  },
 ];
 
 @NgModule({
