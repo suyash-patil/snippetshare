@@ -53,7 +53,7 @@ router.route('/login').post(expressAsyncHandler(async (req, res) => {
     const user = await UserModel.findOne({email: email});
 
     if(user && await user.matchPass(password)){
-        res.json({
+        res.status(201).json({
             _id: user._id,
             email: user.email,
             username: user.username,
@@ -64,7 +64,7 @@ router.route('/login').post(expressAsyncHandler(async (req, res) => {
             updatedAt: user.updatedAt
           })
       } else {
-        res.json(401);
+        res.status(401).json('Invalid Email and Password');
         throw new Error('Invalid Email and Password');
     }
     
