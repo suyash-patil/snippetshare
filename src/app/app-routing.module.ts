@@ -24,6 +24,14 @@ const routes: Routes = [
     path: 'my_snippets',
     loadChildren: () => import('./my-snippets/my-snippets.module').then( m => m.MySnippetsPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
 ];
 
 @NgModule({
