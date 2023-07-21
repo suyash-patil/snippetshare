@@ -1,0 +1,11 @@
+<form [formGroup]="fg">
+      <ion-input formControlName="email" [placeholder]="'Enter Email'"></ion-input>
+      <ion-text [hidden]="fg.controls['email'].valid || (fg.controls['email'].pristine && !fg.controls['email'].touched)" color="danger">Title is required</ion-text>
+      <ion-input formControlName="password" [placeholder]="'Enter Password'"></ion-input>
+      <ion-text [hidden]="fg.controls['password'].valid || (fg.controls['password'].pristine && !fg.controls['password'].touched)" color="danger">Please enter correct password</ion-text>
+      <ion-buttons style="display: flex;flex-direction: row; justify-content: space-evenly; margin-top: 20px;">
+        <ion-button fill="solid" (click)="onLogin()">
+          Login
+        </ion-button>
+      </ion-buttons>
+</form>
